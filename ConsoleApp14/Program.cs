@@ -13,11 +13,15 @@ namespace ConsoleApp14
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Time Einstellen, bitte gib eine Zeit in Sekunden an!");
+            Console.WriteLine("Minuten eingeben!");
             int time1 = Convert.ToInt32(Console.ReadLine());
-            int sekunden = time1 * 1000;
-            Thread.Sleep(sekunden);
-            Console.WriteLine("es sind {0} sekunden vergangen", time1);
+            int minuten = time1 * 60000;
+            Console.WriteLine("Sekunden eingaben!");
+            int time2 = Convert.ToInt32(Console.ReadLine());
+            int sekunden = time2 * 1000;
+            int endtime = minuten + sekunden;
+            Thread.Sleep(endtime);
+            Console.WriteLine("es sind {0} Minuten und {1} Sekunden vergangen", time1, time2);
             SystemSounds.Beep.Play();
             Console.ReadKey();
         }
